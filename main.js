@@ -11,7 +11,7 @@ document.body.appendChild( renderer.domElement );
 
 // Create a geometry
 // Create a box (cube) of 10 width, length, and height
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const geometry = new THREE.BoxGeometry( 3, 3, 3 );
 // Create a MeshPhongMaterial with a color green(?)
 // Phong shading was invented by a guy called Phong - you get a gradient linearly interpolated??
 const flatMaterial = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
