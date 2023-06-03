@@ -5,7 +5,7 @@ const texture_checkered = new THREE.TextureLoader().load( "checkered.png" );
 const texture_know_nothing = new THREE.TextureLoader().load( "i-know-nothing.jpg" );
 const texture_kittens = new THREE.TextureLoader().load( "kittens-with-guns.jpg" );
 const texture_oscar = new THREE.TextureLoader().load( "oscar_thinking.jpeg" );
-const texture = texture_clare;
+const texture = texture_oscar;
 
 // Create a scene
 const scene = new THREE.Scene();
