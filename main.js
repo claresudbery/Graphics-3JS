@@ -1,3 +1,6 @@
+// Load a texture
+texture = new THREE.TextureLoader().load( "checkered.png" );
+
 // Create a scene
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -11,10 +14,13 @@ document.body.appendChild( renderer.domElement );
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 // Create a MeshPhongMaterial with a color green(?)
 // Phong shading was invented by a guy called Phong - you get a gradient linearly interpolated??
-const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+const flatMaterial = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+
+// Create a MeshBasicMaterial with a loaded texture
+const texturedMaterial = new THREE.MeshBasicMaterial( { map: texture} );
 
 // Combine the geometry and material into a mesh
-const cube = new THREE.Mesh( geometry, material );
+const cube = new THREE.Mesh( geometry, texturedMaterial );
 // Add the mesh to the scene
 scene.add( cube );
 
