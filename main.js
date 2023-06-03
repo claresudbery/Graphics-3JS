@@ -1,5 +1,11 @@
 // Load a texture
-texture = new THREE.TextureLoader().load( "Clare-lockdown-square.jpg" );
+const texture_clare = new THREE.TextureLoader().load( "Clare-lockdown-square.jpg" );
+const texture_behaviour = new THREE.TextureLoader().load( "good-behaviour.jpg" );
+const texture_checkered = new THREE.TextureLoader().load( "checkered.png" );
+const texture_know_nothing = new THREE.TextureLoader().load( "i-know-nothing.jpg" );
+const texture_kittens = new THREE.TextureLoader().load( "kittens-with-guns.jpg" );
+const texture_oscar = new THREE.TextureLoader().load( "oscar_thinking.jpeg" );
+const texture = texture_clare;
 
 // Create a scene
 const scene = new THREE.Scene();
