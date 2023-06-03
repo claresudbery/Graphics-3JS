@@ -1,3 +1,4 @@
+// Create a scene
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -5,9 +6,16 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
+// Create a geometry
+// Create a box (cube) of 10 width, length, and height
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+// Create a MeshPhongMaterial with a color green(?)
+// Phong shading was invented by a guy called Phong - you get a gradient linearly interpolated??
 const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+
+// Combine the geometry and material into a mesh
 const cube = new THREE.Mesh( geometry, material );
+// Add the mesh to the scene
 scene.add( cube );
 
 var light = new THREE.AmbientLight( 0x404040 ); // soft white light
@@ -20,7 +28,7 @@ camera.position.z = 5;
 function animate() {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
-    
+
     phase += 0.05; 
     camera.position.y = 2 + Math.sin(phase);
 
