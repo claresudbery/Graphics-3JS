@@ -1,5 +1,5 @@
 // Load a texture
-texture = new THREE.TextureLoader().load( "checkered.png" );
+texture = new THREE.TextureLoader().load( "Clare-lockdown-square.jpg" );
 
 // Create a scene
 const scene = new THREE.Scene();
